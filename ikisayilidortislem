@@ -1,0 +1,84 @@
+using System;
+
+namespace dort_islem2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int sayi1, sayi2, sonuc;
+            string devam = "e";
+            Console.WriteLine("Dort Islem Programina Hos geldiniz...");
+
+            while (devam != "h")
+            {
+                Console.WriteLine("Yapmak Istediginiz Islemi Seciniz");
+                Console.WriteLine("1) toplama 2) cikarma 3) carpma 4) bolme ");
+                int sayi = Convert.ToInt32(Console.ReadLine());
+                switch (sayi)
+                {
+                    case 1:
+                        Console.WriteLine("Toplanmasini istediginiz 2 sayiyi giriniz.");
+                        Console.Write("Sayi 1: ");
+                        sayi1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("");
+                        Console.Write("Sayi 2: ");
+                        sayi2 = Convert.ToInt32(Console.ReadLine());
+                        sonuc = sayi1 + sayi2;
+                        Console.WriteLine("Toplam: " + sonuc);
+                        break;
+                    case 2:
+                        Console.WriteLine("Cikarilmasini istediginiz 2 sayiyi giriniz.");
+                        Console.Write("Sayi 1: ");
+                        sayi1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("");
+                        Console.Write("Sayi 2: ");
+                        sayi2 = Convert.ToInt32(Console.ReadLine());
+                        sonuc = sayi1 - sayi2;
+                        Console.WriteLine("Sonuc: " + sonuc);
+                        break;
+                    case 3:
+                        Console.WriteLine("Carpilmasini istediginiz 2 sayiyi giriniz.");
+                        Console.Write("Sayi 1: ");
+                        sayi1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("");
+                        Console.Write("Sayi 2: ");
+                        sayi2 = Convert.ToInt32(Console.ReadLine());
+                        sonuc = sayi1 * sayi2;
+                        Console.WriteLine("Sonuc: " + sonuc);
+                        break;
+                    case 4:
+                        Console.WriteLine("Bolunmesini istediginiz 2 sayiyi giriniz.");
+                        Console.Write("Sayi 1: ");
+                        sayi1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("");
+                        Console.Write("Sayi 2: ");
+                        sayi2 = Convert.ToInt32(Console.ReadLine());
+                        if (sayi2 == 0)
+                        {
+                            Console.WriteLine("Bir sayı sıfıra bölünemez!");
+                            break;
+                        }
+                        sonuc = sayi1 / sayi2;
+                        Console.WriteLine("Sonuc: " + sonuc);
+                        break;
+                    default:
+                        Console.WriteLine("Gecersiz bir islem sectiniz.");
+                        break;
+                }
+                Console.Write("Devam etmek istiyor musunuz? Evet(e) Hayir(h): ");
+                devam = Console.ReadLine();
+
+                if (devam == "h")
+                {
+                    Console.Clear();
+                    Console.WriteLine("Programi kullandiginiz icin tesekkur ederim.");
+                }
+                else
+                {
+                    Console.Clear();
+                }
+            }
+        }
+    }
+}
